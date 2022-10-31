@@ -57,7 +57,7 @@ jobs:
         run: $(go env GOPATH)/bin/golint -set_exit_status ./...
 
       - name: Fetch latest qself data/
-        run: curl --compressed --output data/twitter.toml https://raw.githubusercontent.com/nowosad/qself-brandur/master/data/twitter.toml
+        run: curl --compressed --output data/twitter.toml https://raw.githubusercontent.com/nowosad/qself-nowosad/main/data/twitter.toml
 
       - name: "Sync"
         run: ./mastodon-cross-post data/twitter.toml

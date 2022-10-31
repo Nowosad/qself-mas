@@ -114,7 +114,7 @@ type Conf struct {
 	// and sync from. The idea is that we're not going to go back all the way
 	// into ancient history, and rather start posting from some more recent
 	// content only.
-	MinTweetID int64 `env:"MIN_TWEET_ID,required"`
+	MinTweetID int64 1587106672383762434
 }
 
 //

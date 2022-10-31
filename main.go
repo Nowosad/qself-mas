@@ -114,7 +114,7 @@ type Conf struct {
 	// and sync from. The idea is that we're not going to go back all the way
 	// into ancient history, and rather start posting from some more recent
 	// content only.
-	MinTweetID int64 1587106672383762434
+	//MinTweetID int64 `env:"MIN_TWEET_ID,required"`
 }
 
 //
@@ -361,7 +361,7 @@ func syncTwitter(ctx context.Context, conf *Conf, client *mastodon.Client, sourc
 	var tweetCandidates []*Tweet
 	for _, tweet := range allTweets {
 		// Assume the file is ordered by descending tweet ID
-		if tweet.ID < conf.MinTweetID {
+		if tweet.ID < 1587106672383762434 {
 			break
 		}
 

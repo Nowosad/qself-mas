@@ -67,4 +67,4 @@ jobs:
           MASTODON_SERVER_URL: "https://mastodon.social"
           MAX_TWEETS_TO_SYNC: 1
           MIN_TWEET_ID: 1345427415061827584
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
